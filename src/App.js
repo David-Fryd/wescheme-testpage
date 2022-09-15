@@ -1,5 +1,6 @@
 import React from "react";
 import {fullCompileProcess, RRCompile} from './scripts/compile'
+import {CustomEvaluator} from './scripts/evaluate'
 
 const App = () =>  {
 
@@ -18,6 +19,8 @@ const App = () =>  {
     let response = RRCompile(program, code, onDone, onDoneError)
 
     console.log("response: ", response)
+
+    CustomEvaluator()
 
     return (
         <>
